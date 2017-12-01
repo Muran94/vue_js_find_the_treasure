@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Vue.jsで作る宝探し</title>
+</head>
+<body>
+
+  <div id="app" class="container">
+    <div class="boxes">
+      <img v-for="(box, i) in boxes" class="box" :class="{ shake: !pushed, disabled: box.disabled }" :src="box.image" @click="open(i)" width="85" height="100">
+    </div>
+    <a href="" id="btn" :class="{ inactive: !pushed }">RESTART?</a>
+  </div>
+
+  <script src="vue.js"></script>
+</body>
+</html>

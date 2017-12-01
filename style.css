@@ -1,0 +1,49 @@
+body {
+  background: #102f44;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+.container {
+  width: 335px;
+  margin: 30px auto;
+}
+.boxes {
+  margin-bottom: 40px;
+}
+.box {
+  cursor: pointer;
+}
+.box + .box {
+  margin-left: 40px;
+}
+.box.disabled {
+  opacity: .5;
+  cursor: auto;
+}
+.shake:hover {
+  animation-name: shake;
+  animation-duration: .2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: rotate(8deg) translate(1px, 0); }
+  50% { transform: rotate(-8deg) translate(-1px, 0); }
+  100% { transform: rotate(8deg) translate(1px, 0); }
+}
+
+#btn {
+  text-decoration: none;
+  display: block;
+  width: 335px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+#btn.inactive {
+  opacity: .2;
+  cursor: default;
+}
